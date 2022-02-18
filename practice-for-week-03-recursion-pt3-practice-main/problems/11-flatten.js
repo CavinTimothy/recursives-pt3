@@ -11,9 +11,23 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
 function flatten(arr) {
-  // Your code here
+  let newArr = [];
+  // if (arr.length === 0) {
+  //   return newArr.unshift(arr);
+  // }
+  arr.forEach((el) => {
+    if (Array.isArray(el)) {
+      newArr.push(...flatten(el)); // [3]
+      // newArr.push(...num);
+    } else {
+      newArr.push(el);
+    }
+  });
+  // newArr.unshift(arr);
+  return newArr;
 }
-  
+
+console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
-  
