@@ -12,7 +12,11 @@ isSorted([5, 4, 3, 2, 1]); // false
 
 
 function isSorted(arr) {
-  // Your code here
+  if(arr[1] === undefined) return true;
+  if(arr[0] > arr[1]) return false;
+  // arr.pop();
+  return arr[0] < arr[1] && isSorted(arr.slice(1));
+  // return false;
 }
 
 
