@@ -19,7 +19,7 @@ fibonacci(4); // 3
 fibonacci(10); // 55
 ***********************************************************************/
 
-const fibonacci = (n) => (n < 3 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
+const fibonacci = (n) => n < 3 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = fibonacci;
